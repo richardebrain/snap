@@ -10,14 +10,14 @@ import Button from "../components/Button";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Head>
         <title>Snap</title>
       </Head>
-      <div className=" flex flex-col-reverse my-12 items-center justify-between mx-auto md:flex-row md:container md:space-x-4">
+      <div className=" flex flex-col-reverse  my-12 items-center justify-between mx-auto md:flex-row md:container md:space-x-4">
         <div className="flex flex-col mx-auto items-center flex-nowrap space-y-10 text-almostBlack">
-          <h1 className="text-6xl font-bold">Make remote work</h1>
-          <p className=" mx-auto text-center text-2xl text-mediumGray font-medium">
+          <h1 className="text-4xl font-bold sm:text-5xl">Make remote work</h1>
+          <p className=" mx-auto text-center text-xl text-mediumGray font-medium sm:text-3xl">
             Get your team in sync, no matter your location. <br /> Streamline
             processes, create team rituals , and watch productivity soar
           </p>
@@ -27,7 +27,7 @@ export default function Home() {
               Learn more
             </Button>
           </div>
-          <div className="logos flex space-x-5  mx-auto  items-center justify-between ">
+          <div className="logos flex space-x-1  mx-auto  items-center justify-between sm:space-x-6 md:space-x-8">
             <DataBiz />
             <AudioPhile />
             <Maker />
@@ -47,7 +47,7 @@ export default function Home() {
           <Image src={heroImageDesktop} alt="hero-mobile" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

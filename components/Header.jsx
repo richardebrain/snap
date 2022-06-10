@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Header = () => {
   return (
-    <header className="my-10 flex justify-between items-center mx-5 max-h-24 text-mediumGray">
+    <header className="my-10 flex justify-between mx-auto items-center mx-5 max-h-24 text-mediumGray">
       <div className=" min-w-fit ">
         <SnapLogo />
       </div>
