@@ -16,8 +16,13 @@ module.exports = {
       'almostWhite': "hsl(0, 0%, 98%)",
       'mediumGray': "hsl(0, 0%, 41%)",
       'almostBlack': "hsl(0, 0%, 8%)",
+      'white':'white'
     },
-    extend: {},
+    extend: {
+      boxShadow:{
+        '3xl':'-3px 2px 24px 6px rgba(158,140,140,0.40)'
+      }
+    },
   },
   plugins: [],
 };
