@@ -4,6 +4,10 @@ import CloseMenu from "../public/images/icon-close-menu.svg";
 import Up from "../public/images/icon-arrow-up.svg";
 import Down from "../public/images/icon-arrow-down.svg";
 import Button from "./Button";
+import TodoIcon from "../public/images/icon-todo.svg";
+import ReminderIcon from "../public/images/icon-reminders.svg";
+import PlanningIcon from "../public/images/icon-planning.svg";
+import CalendarIcon from "../public/images/icon-calendar.svg";
 
 import { useState } from "react";
 import FeaturesList from "./FeaturesList";
@@ -85,15 +89,35 @@ const Header = () => {
         </div>
       </div>
       {/* sidebar  */}
-      <div className=" flex items-start flex-col  fixed right-0 bg-white h-full w-2/3  z-10 overflow-x-hidden mt-[618px]   text-mediumGray space-y-24">
+      <div className=" flex items-start flex-col  fixed right-0 bg-white h-full w-60  z-10 overflow-x-hidden mt-[624px]   text-mediumGray space-y-24 md:hidden">
         <div id="close-btn">
           <CloseMenu className="absolute top-6 right-5 " />
         </div>
-        <div id="nav-content" className=" mx-auto w-3/4 space-y-4">
-          <div className="cursor-pointer font-bold flex justify-between items-center space-x-2 hover:text-almostBlack">
-            <div className="flex w-2/3 items-center space-x-5">
+        <div id="nav-content" className=" mx-auto w-3/4 font-bold space-y-4">
+
+          <div className="flex flex-col  justify-between items-center space-x-2">
+
+            <div className="flex w-2/3  cursor-pointer  items-center space-x-5  hover:text-almostBlack">
               <h4>Features</h4>
               <Down />
+            </div>
+            <div id="feature-content" className="flex flex-col space-y-3">
+              <span className="flex cursor-pointer justify-between space-x-2 items-center mt-2 w-2/2 hover:text-almostBlack">
+                <TodoIcon />
+                <span className="self-left">Todo List</span>
+              </span>
+              <span className="flex cursor-pointer justify-between items-center space-x-4 w-2/2 hover:text-almostBlack">
+                <CalendarIcon />
+                <span>Calendars</span>
+              </span>
+              <span className="flex cursor-pointer justify-between items-center space-x-4 w-2/2 hover:text-almostBlack">
+                <ReminderIcon />
+                <span className="">Reminders</span>
+              </span>
+              <span className="flex cursor-pointer justify-between items-center space-x-4 mb-3 w-2/2 hover:text-almostBlack">
+                <PlanningIcon />
+                <span className="">Planning</span>
+              </span>
             </div>
           </div>
           <div className="cursor-pointer font-bold flex justify-between items-center space-x-2 hover:text-almostBlack">
@@ -101,6 +125,7 @@ const Header = () => {
               <h4>Company</h4>
               <Down />
             </div>
+
           </div>
           <div className="cursor-pointer font-bold  hover:text-almostBlack">
             <h4>Careers</h4>
